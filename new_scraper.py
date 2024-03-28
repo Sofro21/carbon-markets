@@ -54,6 +54,14 @@ for val in instruments:
     price_change = soup.find("div", {"class": "price_change"}).get_text()
     price_range = soup.find("span", {"class": "price_range"}).get_text()
 
+    # If exists turn price into float of dollar version
+    if price_desc and "available" not in price_desc:
+        print(price_desc)
+        temp = price_desc[: price_desc.rfind(")")].split("(")
+        print(temp)
+        price_desc = float(temp[-1][3:])
+        print(price_desc)
+
     # Saving all the information on a dictionary to later write to json
     temp = {
         "type": type_,
