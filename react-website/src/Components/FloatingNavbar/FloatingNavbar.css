@@ -1,0 +1,31 @@
+.floating-navbar {
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .floating-navbar button {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    padding: 15px 80px; /* Adjust padding for button area */
+    cursor: pointer;
+    border-right: 1px solid #cccccc; /* Add light border between buttons */
+    transition: background-color 0.3s; /* Add smooth transition */
+  }
+  
+  .floating-navbar button:last-child {
+    margin-right: 0; /* Remove margin from last button */
+    border-right: none; /* Remove border from last button */
+  }
+  
+  .floating-navbar:hover button:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Change background color on hover */
+
+  }
+  
