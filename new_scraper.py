@@ -19,7 +19,7 @@ instruments = select_element.find_elements(By.TAG_NAME, "option")
 instruments = [option.get_attribute("value") for option in instruments]
 
 # Initializing the dictionary to later write into json
-jason = defaultdict(dict)
+jason = []
 
 # Going through all the values
 for val in instruments:
@@ -54,8 +54,17 @@ for val in instruments:
     price_change = soup.find("div", {"class": "price_change"}).get_text()
     price_range = soup.find("span", {"class": "price_range"}).get_text()
 
+    # If exists turn price into float of dollar version
+    if price_desc and "available" not in price_desc:
+        print(price_desc)
+        temp = price_desc[: price_desc.rfind(")")].split("(")
+        print(temp)
+        price_desc = float(temp[-1][3:])
+        print(price_desc)
+
     # Saving all the information on a dictionary to later write to json
     temp = {
+        "name": val,
         "type": type_,
         "status": status,
         "jurisdiction_covered": jurisdiction_covered,
@@ -70,7 +79,7 @@ for val in instruments:
 
     print(f"Completed {jurisdiction_covered}-{val}")
 
-    jason[val] = temp
+    jason.append(temp)
 
 print("Writing json")
 
