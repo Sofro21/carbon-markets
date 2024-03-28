@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import FloatingNavbar from "./Components/FloatingNavbar/FloatingNavbar";
 
 function App() {
   return (
