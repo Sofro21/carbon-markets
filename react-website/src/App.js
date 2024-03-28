@@ -1,17 +1,23 @@
 import logo from "./logo.svg";
 import "./App.css";
-import FloatingNavbar from "./Components/FloatingNavbar/FloatingNavbar";
+import DarkNavbar from "./Components/DarkNavbar/DarkNavbar";
+import Container from "react-bootstrap/Container"; /*Boostrap*/
+import Nav from "react-bootstrap/Nav"; /*Boostrap*/
+import Navbar from "react-bootstrap/Navbar"; /*Boostrap*/
 
 function App() {
   return (
     <div>
-      {/* Other content */}
-      <FloatingNavbar>
-        {/* Navbar items go here */}
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-      </FloatingNavbar>
+      <Navbar bg="dark" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
     </div>
   );
 }
