@@ -4,6 +4,7 @@ import DarkNavbar from "./Components/DarkNavbar/DarkNavbar";
 import Container from "react-bootstrap/Container"; /*Boostrap*/
 import Nav from "react-bootstrap/Nav"; /*Boostrap*/
 import Navbar from "react-bootstrap/Navbar"; /*Boostrap*/
+import UXCreditCalculatorCost from "./Components/UXCreditCalculatorCost/UXCreditCalculatorCost";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
+      <UXCreditCalculatorCost/>
     </div>
   );
 }
