@@ -19,7 +19,7 @@ instruments = select_element.find_elements(By.TAG_NAME, "option")
 instruments = [option.get_attribute("value") for option in instruments]
 
 # Initializing the dictionary to later write into json
-jason = defaultdict(dict)
+jason = []
 
 # Going through all the values
 for val in instruments:
@@ -64,6 +64,7 @@ for val in instruments:
 
     # Saving all the information on a dictionary to later write to json
     temp = {
+        "name": val,
         "type": type_,
         "status": status,
         "jurisdiction_covered": jurisdiction_covered,
@@ -78,7 +79,7 @@ for val in instruments:
 
     print(f"Completed {jurisdiction_covered}-{val}")
 
-    jason[val] = temp
+    jason.append(temp)
 
 print("Writing json")
 
