@@ -3,9 +3,6 @@ import { Container, Row, Col, Form } from 'react-bootstrap';
 import data from './data.json';
 
 const UXCreditCalculatorCost = () => {
-    /// TO BE IMPLEMENTED - FILTERING SUCH THAT IN GEOGRAPHICAL AREA REPEATED VALUES APPEAR ONLY ONCE
-
-
     // Definition of the variables used
     const [selectedGeographicalArea, setSelectedGeographicalArea] = useState('');
     const [selectedSpecificArea, setSelectedSpecificArea] = useState('');
@@ -19,10 +16,11 @@ const UXCreditCalculatorCost = () => {
     }
 
     // Because we use JSON, this function is necessary for the mapping of the ekements in the jurisdiction_covered
-    const DisplayGeographicalArea = data.map(
+    // We transform the information in a Set to get only once the repeated values
+    const DisplayGeographicalArea = [...new Set(data.map(item => item.jurisdiction_covered))].map(
         (info) => {
             return (
-                <option key={info.jurisdiction_covered}>{info.jurisdiction_covered}</option>
+                <option key={info}>{info}</option>
             )
         }
     )
