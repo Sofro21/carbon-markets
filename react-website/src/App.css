@@ -69,3 +69,41 @@
 .parallax-bg {
   transform: translate3d(0, calc(var(--scroll, 0) * -100vh), 0);
 }
+
+.summary-section {
+  background-color: #f8f9fa; /* Example background color */
+  padding: 50px 0; /* Example padding */
+}
+
+.summary-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-text {
+  flex: 1;
+}
+
+.summary-photo {
+  flex: 1;
+  text-align: center;
+}
+
+.summary-photo img {
+  max-width: 100%;
+}
+
+.caption {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.about-section {
+  background-color: #f8f9fa; /* Example background color */
+  padding: 50px 0; /* Example padding */
+}
+
+.about-section h2 {
+  margin-bottom: 20px; /* Example margin */
+}

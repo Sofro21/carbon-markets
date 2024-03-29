@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container"; /*Boostrap*/
 import Nav from "react-bootstrap/Nav"; /*Boostrap*/
 import Navbar from "react-bootstrap/Navbar"; /*Boostrap*/
 import ParallaxComponent from "./Components/ParallaxComponent/ParallaxComponent";
+import sofroimg from "./sofro-god2.jpg";
 
 function App() {
   return (
@@ -18,16 +19,36 @@ function App() {
         </Container>
       </Navbar>
       <ParallaxComponent></ParallaxComponent>
-      <h1>Sofro God</h1>
-      <h1>Sofro God</h1>
-      <h1>Sofro God</h1>
-      <h1>Sofro God</h1>
-      <h1>Sofro God</h1>
-      <h1>Sofro God</h1>
-      <h1>Sofro God</h1>
-      <h1>Sofro God</h1>
-      <h1>Sofro God</h1>
-      <h1>Sofro God</h1>
+      <div className="summary-section">
+        <Container>
+          <div className="summary-content">
+            <div className="summary-text">
+              <h2>Summary</h2>
+              <p>
+                Sofro GOD Sofro GOD Sofro GOD Sofro GOD Sofro GOD Sofro GOD
+                Sofro GOD Sofro GOD Sofro GOD Sofro GOD Sofro GOD Sofro GOD
+                Sofro GOD Sofro GOD Sofro GOD
+              </p>
+              {/* Add more content here */}
+            </div>
+            <div className="summary-photo">
+              <img src={sofroimg} alt="Summary" />
+              <p className="caption">Photo caption goes here</p>
+            </div>
+          </div>
+        </Container>
+      </div>
+      <div className="about-section">
+        <Container>
+          <h2>About Us</h2>
+          <p>
+            Sofro GOD Sofro GOD Sofro GOD Sofro GOD Sofro GOD Sofro GOD Sofro
+            GOD Sofro GOD Sofro GOD Sofro GOD Sofro GOD Sofro GOD Sofro GOD
+            Sofro GOD Sofro GOD
+          </p>
+          {/* Add more content here */}
+        </Container>
+      </div>
     </div>
   );
 }
