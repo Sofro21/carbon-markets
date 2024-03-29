@@ -41,6 +41,10 @@ def scrape_data(val):
     covered_fuels = soup.find("span", {"class": "covered_fuels"}).get_text()
     price_change = soup.find("div", {"class": "price_change"}).get_text()
 
+    if "Abolished" in status:
+        driver.quit()
+        return None
+
     # Turn price_desc if it is a numerical (Dollar)
     if "available" not in price_desc:
         temp = price_desc[: price_desc.rfind(")")].split("(")
