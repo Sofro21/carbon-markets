@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container"; /*Boostrap*/
 import Nav from "react-bootstrap/Nav"; /*Boostrap*/
 import Navbar from "react-bootstrap/Navbar"; /*Boostrap*/
 import UXCreditCalculatorCost from "./Components/UXCreditCalculatorCost/UXCreditCalculatorCost";
+import Newsletter from "./Components/NewsLetter/Newsletter";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </Container>
       </Navbar>
       <UXCreditCalculatorCost/>
+      <Newsletter/>
     </div>
   );
 }
