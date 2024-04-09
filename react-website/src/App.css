@@ -36,3 +36,74 @@
     transform: rotate(360deg);
   }
 }
+
+.App-parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.App-parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: "url('public/sofro-god.jpg')";
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(0);
+}
+
+.App-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+:root {
+  --scroll: 0;
+}
+
+.parallax-bg {
+  transform: translate3d(0, calc(var(--scroll, 0) * -100vh), 0);
+}
+
+.summary-section {
+  background-color: #f8f9fa; /* Example background color */
+  padding: 50px 0; /* Example padding */
+}
+
+.summary-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-text {
+  flex: 1;
+}
+
+.summary-photo {
+  flex: 1;
+  text-align: center;
+}
+
+.summary-photo img {
+  max-width: 100%;
+}
+
+.caption {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.about-section {
+  background-color: #f8f9fa; /* Example background color */
+  padding: 50px 0; /* Example padding */
+}
+
+.about-section h2 {
+  margin-bottom: 20px; /* Example margin */
+}
