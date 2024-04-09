@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "Sofro",
+        "type": "Subnational - State/Province ETS",
+        "status": "Implemented in 2007",
+        "jurisdiction_covered": "Alberta",
+        "allocation": "Baselines (Intensity-based)",
+        "price_setting": "Price ceiling ",
+        "covered_gasses": "All",
+        "covered_fuels": "Coal; Diesel; Gasoline; Kerosene; Other oil products (crude oil, etc); Natural gas; LPG; Biofuels; Emissions not from fuel use",
+        "price_desc": 124,
+        "price_change": "117%"
+    },
+    {
+        "id": 2,
+        "name": "Demir",
+        "type": "Subnational - State/Province Carbon tax",
+        "status": "Implemented in 2017, Abolished in 2019",
+        "jurisdiction_covered": "Alberta",
+        "allocation": "",
+        "price_setting": "",
+        "covered_gasses": "",
+        "covered_fuels": "",
+        "price_desc": 23,
+        "price_change": ""
+    }
+]

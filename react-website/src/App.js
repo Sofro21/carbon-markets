@@ -5,6 +5,8 @@ import Navbar from "react-bootstrap/Navbar"; /*Boostrap*/
 import ParallaxComponent from "./Components/ParallaxComponent/ParallaxComponent";
 import sofroimg from "./sofro-god2.jpg";
 import SearchBar from "./Components/CarSearchBar/carsearchbar";
+import UXCreditCalculatorCost from "./Components/UXCreditCalculatorCost/UXCreditCalculatorCost";
+import Newsletter from "./Components/NewsLetter/Newsletter";
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
         </Container>
       </div>
       <SearchBar></SearchBar>
+      <UXCreditCalculatorCost/>
+      <Newsletter/>
     </div>
   );
 }
